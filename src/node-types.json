@@ -442,6 +442,16 @@
     "type": "attack_step",
     "named": true,
     "fields": {
+      "causal_mode": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "step_causal_mode",
+            "named": true
+          }
+        ]
+      },
       "cias": {
         "multiple": true,
         "required": false,
@@ -908,7 +918,6 @@
   {
     "type": "source_file",
     "named": true,
-    "root": true,
     "fields": {},
     "children": {
       "multiple": true,
@@ -923,6 +932,11 @@
   },
   {
     "type": "star",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "step_causal_mode",
     "named": true,
     "fields": {}
   },
@@ -1196,6 +1210,10 @@
     "named": false
   },
   {
+    "type": "action",
+    "named": false
+  },
+  {
     "type": "asset",
     "named": false
   },
@@ -1213,8 +1231,11 @@
   },
   {
     "type": "comment",
-    "named": true,
-    "extra": true
+    "named": true
+  },
+  {
+    "type": "effect",
+    "named": false
   },
   {
     "type": "extends",
