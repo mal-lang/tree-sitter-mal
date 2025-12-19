@@ -1,5 +1,4 @@
 {
-  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/grammar.schema.json",
   "name": "mal",
   "word": "identifier",
   "rules": {
@@ -288,6 +287,22 @@
           }
         },
         {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "FIELD",
+              "name": "causal_mode",
+              "content": {
+                "type": "SYMBOL",
+                "name": "step_causal_mode"
+              }
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
           "type": "FIELD",
           "name": "id",
           "content": {
@@ -459,6 +474,19 @@
           }
         ]
       }
+    },
+    "step_causal_mode": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "action"
+        },
+        {
+          "type": "STRING",
+          "value": "effect"
+        }
+      ]
     },
     "cias": {
       "type": "SEQ",
@@ -1647,6 +1675,6 @@
   ],
   "externals": [],
   "inline": [],
-  "supertypes": [],
-  "reserved": {}
+  "supertypes": []
 }
+

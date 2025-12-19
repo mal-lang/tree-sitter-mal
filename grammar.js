@@ -87,6 +87,7 @@ module.exports = grammar({
     // Attack step for an asset
     attack_step: $ => seq(
       field('step_type', $.step_type),
+      optional(field('causal_mode', $.step_causal_mode)),
       field('id', $.identifier),
       optional(field('tag', repeat(seq('@', $.identifier)))),
       optional(field('cias', seq(
@@ -108,6 +109,11 @@ module.exports = grammar({
       'E',
       '!E',
     )),
+
+    step_causal_mode: $ => choice(
+      'action',
+      'effect',
+    ),
 
     cias: $ => commaSep1($.cia),
 
