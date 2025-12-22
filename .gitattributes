@@ -1,5 +1,14 @@
 * text=auto eol=lf
 
+tree-sitter.json text eol=lf
+grammar.js        text eol=lf
+
+*.c    text eol=lf
+*.h    text eol=lf
+*.js   text eol=lf
+*.json text eol=lf
+*.yml  text eol=lf
+
 # Generated source files
 src/*.json linguist-generated
 src/parser.c linguist-generated
