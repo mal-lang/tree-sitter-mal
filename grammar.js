@@ -131,12 +131,12 @@ module.exports = grammar({
 
     detector_context: $ => seq(
       '(',
-      commaSep1($.detector_context_asset),
+      commaSep1($.detector_context_reference),
       ')',
     ),
 
-    detector_context_asset: $ => seq(
-      field('type', $.identifier),
+    detector_context_reference: $ => seq(
+      field('ctx_step', $.asset_expr),
       field('id', $.identifier),
     ),
 

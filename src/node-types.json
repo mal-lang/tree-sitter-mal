@@ -715,27 +715,27 @@
       "required": true,
       "types": [
         {
-          "type": "detector_context_asset",
+          "type": "detector_context_reference",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "detector_context_asset",
+    "type": "detector_context_reference",
     "named": true,
     "fields": {
-      "id": {
+      "ctx_step": {
         "multiple": false,
         "required": true,
         "types": [
           {
-            "type": "identifier",
+            "type": "asset_expr",
             "named": true
           }
         ]
       },
-      "type": {
+      "id": {
         "multiple": false,
         "required": true,
         "types": [
