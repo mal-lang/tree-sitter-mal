@@ -79,9 +79,10 @@
 (asset_declaration
   [id: (identifier)
    extends: (identifier)] @type)
-(detector_context_asset
-  type: (identifier) @type
-  id: (identifier) @property)
+(detector_context_reference
+  ctx_step: (asset_expr
+    (identifier) @property)
+  id: (identifier) @variable)
 (asset_variable_substitution
   id: (identifier) @variable)
 (asset_variable
