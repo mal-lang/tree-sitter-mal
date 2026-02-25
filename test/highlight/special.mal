@@ -8,8 +8,7 @@ category Cat
         | a ! d.e (context label) detectorType [1]
         //     ^ punctuation.delimiter
         //        ^ punctuation.bracket
-        //         ^^^^^^^ type
-        //                 ^^^^^ property
+        //         ^^^^^^^ function
         //                                     ^ punctuation.bracket
         //                                       ^ punctuation.bracket
         | b {C, I, A}

@@ -22,11 +22,13 @@ category Test {
             id: (identifier)
             detector: (detector
               context: (detector_context
-                (detector_context_asset
-                  type: (identifier)
+                (detector_context_reference
+                  ctx_step: (asset_expr
+                        (identifier))
                   id: (identifier))
-                (detector_context_asset
-                  type: (identifier)
+                (detector_context_reference
+                  ctx_step: (asset_expr
+                        (identifier))
                   id: (identifier))))))))))
 
 ==========================
@@ -53,11 +55,13 @@ category Test {
             id: (identifier)
             detector: (detector
               context: (detector_context
-                (detector_context_asset
-                  type: (identifier)
+                (detector_context_reference
+                  ctx_step: (asset_expr
+                        (identifier))
                   id: (identifier))
-                (detector_context_asset
-                  type: (identifier)
+                (detector_context_reference
+                  ctx_step: (asset_expr
+                        (identifier))
                   id: (identifier))))))))))
 
 ===========================
@@ -88,8 +92,9 @@ category Test {
                 (identifier)
                 (identifier))
               context: (detector_context
-                (detector_context_asset
-                  type: (identifier)
+                (detector_context_reference
+                  ctx_step: (asset_expr
+                        (identifier))
                   id: (identifier))))))))))
 
 ===========================
@@ -116,8 +121,9 @@ category Test {
             id: (identifier)
             detector: (detector
               context: (detector_context
-                (detector_context_asset
-                  type: (identifier)
+                (detector_context_reference
+                  ctx_step: (asset_expr
+                        (identifier))
                   id: (identifier)))
               type: (identifier))))))))
 
@@ -145,8 +151,9 @@ category Test {
             id: (identifier)
             detector: (detector
               context: (detector_context
-                (detector_context_asset
-                  type: (identifier)
+                (detector_context_reference
+                  ctx_step: (asset_expr
+                        (identifier))
                   id: (identifier)))
               ttc: (ttc
                 (integer)))))))))

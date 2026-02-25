@@ -631,7 +631,7 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "detector_context_asset"
+              "name": "detector_context_reference"
             },
             {
               "type": "REPEAT",
@@ -644,7 +644,7 @@
                   },
                   {
                     "type": "SYMBOL",
-                    "name": "detector_context_asset"
+                    "name": "detector_context_reference"
                   }
                 ]
               }
@@ -657,15 +657,15 @@
         }
       ]
     },
-    "detector_context_asset": {
+    "detector_context_reference": {
       "type": "SEQ",
       "members": [
         {
           "type": "FIELD",
-          "name": "type",
+          "name": "ctx_step",
           "content": {
             "type": "SYMBOL",
-            "name": "identifier"
+            "name": "asset_expr"
           }
         },
         {

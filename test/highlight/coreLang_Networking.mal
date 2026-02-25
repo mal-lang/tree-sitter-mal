@@ -831,8 +831,7 @@ category Networking {
         ! detector.my_name (RoutingFirewall firewall) audit [1]
       //^ operator
       //                   ^ punctuation.bracket
-      //                    ^ type
-      //                                    ^ property
+      //                    ^ function
       //                                                    ^ punctuation.bracket
       //                                                     ^ number
       //                                                      ^ punctuation.bracket
