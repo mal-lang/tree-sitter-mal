@@ -684,12 +684,12 @@
           }
         ]
       },
-      "ttc": {
+      "tp_fp_rate": {
         "multiple": false,
         "required": false,
         "types": [
           {
-            "type": "ttc",
+            "type": "tp_fp_rate",
             "named": true
           }
         ]
@@ -939,6 +939,40 @@
     "type": "step_causal_mode",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "tp_fp_rate",
+    "named": true,
+    "fields": {
+      "fp_rate": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "float",
+            "named": true
+          },
+          {
+            "type": "integer",
+            "named": true
+          }
+        ]
+      },
+      "tp_rate": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "float",
+            "named": true
+          },
+          {
+            "type": "integer",
+            "named": true
+          }
+        ]
+      }
+    }
   },
   {
     "type": "ttc",

@@ -581,10 +581,10 @@
           "members": [
             {
               "type": "FIELD",
-              "name": "ttc",
+              "name": "tp_fp_rate",
               "content": {
                 "type": "SYMBOL",
-                "name": "ttc"
+                "name": "tp_fp_rate"
               }
             },
             {
@@ -675,6 +675,39 @@
             "type": "SYMBOL",
             "name": "identifier"
           }
+        }
+      ]
+    },
+    "tp_fp_rate": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "["
+        },
+        {
+          "type": "FIELD",
+          "name": "tp_rate",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_number"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ","
+        },
+        {
+          "type": "FIELD",
+          "name": "fp_rate",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_number"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "]"
         }
       ]
     },
