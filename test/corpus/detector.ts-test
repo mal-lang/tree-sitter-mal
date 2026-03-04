@@ -133,7 +133,7 @@ Detector with TTC
 
 category Test {
     asset TestAsset {
-        | detector ! (a a_label) [ 1 ]
+        | detector ! (a a_label) [1.0, 0.0]
     }
 }
 
@@ -155,5 +155,6 @@ category Test {
                   ctx_step: (asset_expr
                         (identifier))
                   id: (identifier)))
-              ttc: (ttc
-                (integer)))))))))
+                  tp_fp_rate: (tp_fp_rate
+                    tp_rate: (float)
+                    fp_rate: (float)))))))))

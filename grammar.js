@@ -124,7 +124,7 @@ module.exports = grammar({
       optional(field('name', $.detector_name)),
       field('context', $.detector_context),
       optional(field('type', $.identifier)),
-      optional(field('ttc', $.ttc)),
+      optional(field('tp_fp_rate', $.tp_fp_rate)),
     ),
 
     detector_name: $ => sep1($.identifier, '.'),
@@ -139,6 +139,17 @@ module.exports = grammar({
       field('ctx_step', $.asset_expr),
       field('id', $.identifier),
     ),
+
+    // True positive and false positive rates for detector.
+    // False positive rate is optional
+    tp_fp_rate: $ => seq(
+      '[',
+      field('tp_rate', $._number),
+      ',',
+      field('fp_rate', $._number),
+      ']',
+    ),
+
 
     // Precondition for attack steps
     preconditions: $ => seq(
