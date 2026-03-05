@@ -24,11 +24,11 @@ category Test {
               context: (detector_context
                 (detector_context_reference
                   ctx_step: (asset_expr
-                        (identifier))
+                    (identifier))
                   id: (identifier))
                 (detector_context_reference
                   ctx_step: (asset_expr
-                        (identifier))
+                    (identifier))
                   id: (identifier))))))))))
 
 ==========================
@@ -57,11 +57,11 @@ category Test {
               context: (detector_context
                 (detector_context_reference
                   ctx_step: (asset_expr
-                        (identifier))
+                    (identifier))
                   id: (identifier))
                 (detector_context_reference
                   ctx_step: (asset_expr
-                        (identifier))
+                    (identifier))
                   id: (identifier))))))))))
 
 ===========================
@@ -94,7 +94,7 @@ category Test {
               context: (detector_context
                 (detector_context_reference
                   ctx_step: (asset_expr
-                        (identifier))
+                    (identifier))
                   id: (identifier))))))))))
 
 ===========================
@@ -123,17 +123,17 @@ category Test {
               context: (detector_context
                 (detector_context_reference
                   ctx_step: (asset_expr
-                        (identifier))
+                    (identifier))
                   id: (identifier)))
               type: (identifier))))))))
 
 =================
-Detector with TTC
+Detector with TPR/FPR
 =================
 
 category Test {
     asset TestAsset {
-        | detector ! (a a_label) [1.0, 0.0]
+        | detector ! (a a_label) [tpr: 1.0, fpr: 0.0]
     }
 }
 
@@ -153,8 +153,9 @@ category Test {
               context: (detector_context
                 (detector_context_reference
                   ctx_step: (asset_expr
-                        (identifier))
+                    (identifier))
                   id: (identifier)))
-                  tp_fp_rate: (tp_fp_rate
-                    tp_rate: (float)
-                    fp_rate: (float)))))))))
+              tp_fp_rate: (tp_fp_rate
+                (tp_fp_pair
+                  tp_rate: (float)
+                  fp_rate: (float))))))))))

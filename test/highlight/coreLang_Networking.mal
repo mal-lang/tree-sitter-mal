@@ -828,22 +828,7 @@ category Networking {
       //          ^ comment
       //              ^ comment
       //                ^ comment
-        ! detector.my_name (RoutingFirewall firewall) audit [1]
-      //^ operator
-      //                   ^ punctuation.bracket
-      //                    ^ function
-      //                                                    ^ punctuation.bracket
-      //                                                     ^ number
-      //                                                      ^ punctuation.bracket
-        ->  successfulAccessNetworksUninspected,
-      // ^ operator
-      //    ^ function
-      //                                       ^ punctuation.delimiter
-            bypassRestricted,
-      //    ^ function
-      //                    ^ punctuation.delimiter
-            bypassPayloadInspection
-      //    ^ function
+
 
       | attemptAccessNetworksInspected @hidden
       // <- operator

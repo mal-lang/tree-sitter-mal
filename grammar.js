@@ -141,15 +141,48 @@ module.exports = grammar({
     ),
 
     // True positive and false positive rates for detector.
-    // False positive rate is optional
     tp_fp_rate: $ => seq(
       '[',
-      field('tp_rate', $._number),
-      ',',
-      field('fp_rate', $._number),
+      choice(
+        $.tp_fp_pair,
+        $.tpr_only,
+        $.fpr_only
+      ),
       ']',
     ),
 
+    tp_fp_pair: $ => choice(
+      seq(
+        field('tpr_key', 'tpr'),
+        ':',
+        field('tp_rate', $._number),
+        ',',
+        field('fpr_key', 'fpr'),
+        ':',
+        field('fp_rate', $._number),
+      ),
+      seq(
+        field('fpr_key', 'fpr'),
+        ':',
+        field('fp_rate', $._number),
+        ',',
+        field('tpr_key', 'tpr'),
+        ':',
+        field('tp_rate', $._number),
+      )
+    ),
+
+    tpr_only: $ => seq(
+      field('tpr_key', 'tpr'),
+      ':',
+      field('tp_rate', $._number),
+    ),
+
+    fpr_only: $ => seq(
+      field('fpr_key', 'fpr'),
+      ':',
+      field('fp_rate', $._number),
+    ),
 
     // Precondition for attack steps
     preconditions: $ => seq(

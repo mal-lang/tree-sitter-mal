@@ -763,6 +763,36 @@
     }
   },
   {
+    "type": "fpr_only",
+    "named": true,
+    "fields": {
+      "fp_rate": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "float",
+            "named": true
+          },
+          {
+            "type": "integer",
+            "named": true
+          }
+        ]
+      },
+      "fpr_key": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "fpr",
+            "named": false
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "include_declaration",
     "named": true,
     "fields": {
@@ -941,7 +971,7 @@
     "fields": {}
   },
   {
-    "type": "tp_fp_rate",
+    "type": "tp_fp_pair",
     "named": true,
     "fields": {
       "fp_rate": {
@@ -958,6 +988,16 @@
           }
         ]
       },
+      "fpr_key": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "fpr",
+            "named": false
+          }
+        ]
+      },
       "tp_rate": {
         "multiple": false,
         "required": true,
@@ -969,6 +1009,69 @@
           {
             "type": "integer",
             "named": true
+          }
+        ]
+      },
+      "tpr_key": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "tpr",
+            "named": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "tp_fp_rate",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "fpr_only",
+          "named": true
+        },
+        {
+          "type": "tp_fp_pair",
+          "named": true
+        },
+        {
+          "type": "tpr_only",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tpr_only",
+    "named": true,
+    "fields": {
+      "tp_rate": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "float",
+            "named": true
+          },
+          {
+            "type": "integer",
+            "named": true
+          }
+        ]
+      },
+      "tpr_key": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "tpr",
+            "named": false
           }
         ]
       }
@@ -1280,6 +1383,10 @@
     "named": true
   },
   {
+    "type": "fpr",
+    "named": false
+  },
+  {
     "type": "identifier",
     "named": true
   },
@@ -1310,6 +1417,10 @@
   {
     "type": "string",
     "named": true
+  },
+  {
+    "type": "tpr",
+    "named": false
   },
   {
     "type": "{",
