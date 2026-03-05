@@ -101,3 +101,19 @@
              (#not-match? @tag "hidden|debug|trace"))
 (attack_step (identifier) @tag.builtin
              (#match? @tag.builtin "hidden|debug|trace"))
+
+; tp_fp_rate highlighting
+(tp_fp_rate
+  "tpr" @property)
+
+(tp_fp_rate
+  "fpr" @property)
+
+(tp_fp_rate
+  ":" @punctuation.delimiter)
+
+(tp_fp_rate
+  "," @punctuation.delimiter)
+
+(tp_fp_rate
+  (float) @number.float)
