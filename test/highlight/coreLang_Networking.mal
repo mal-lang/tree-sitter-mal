@@ -828,19 +828,19 @@ category Networking {
       //          ^ comment
       //              ^ comment
       //                ^ comment
-        ! detector.my_name (RoutingFirewall firewall) audit [tpr: 1.0, fpr: 0.1]
+        ! detector.my_name (keyword.step_name ctx_label) audit [tpr: 1.0, fpr: 0.1]
       //^ operator
       //                   ^ punctuation.bracket
       //                    ^ function
-      //                                                    ^ punctuation.bracket
-      //                                                     ^ property
-      //                                                        ^ punctuation.delimiter
-      //                                                          ^ number
-      //                                                             ^ punctuation.delimiter
-      //                                                               ^ property
-      //                                                                  ^ punctuation.delimiter
-      //                                                                    ^ number
-      //                                                                       ^ punctuation.bracket
+      //                                                       ^ punctuation.bracket
+      //                                                        ^ property
+      //                                                           ^ punctuation.delimiter
+      //                                                             ^ number
+      //                                                                ^ punctuation.delimiter
+      //                                                                    ^ property
+      //                                                                     ^ punctuation.delimiter
+      //                                                                         ^ number
+      //                                                                          ^ punctuation.bracket
         ->  successfulAccessNetworksUninspected,
       // ^ operator
       //    ^ function
