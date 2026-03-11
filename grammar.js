@@ -121,8 +121,8 @@ module.exports = grammar({
     detector: $ => seq(
       // Increase //! precidence to overrule comments
       choice('!', token(prec(1, '//!'))),
-      optional(field('name', $.detector_name)),
-      field('context', $.detector_context),
+      field('name', $.detector_name),
+      optional(field('context', $.detector_context)),
       optional(field('type', $.identifier)),
       optional(field('tp_fp_rate', $.tp_fp_rate)),
     ),
@@ -137,7 +137,7 @@ module.exports = grammar({
 
     detector_context_reference: $ => seq(
       field('ctx_step', $.asset_expr),
-      optional(field('id', $.identifier)),
+      field('id', $.identifier),
     ),
 
     // True positive and false positive rates for detector.
