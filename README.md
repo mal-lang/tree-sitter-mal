@@ -17,7 +17,7 @@ To see the parse tree the parser generates, use the command [`tree-sitter parse`
 
 To use the highlight through the command line, make sure you have a [config file initialized](https://tree-sitter.github.io/tree-sitter/cli/init-config.html). Then, you can use your own highlighting colors or copy the ones in the repository, specialized for MAL. Lastly, use `tree-sitter highlight` to generate an output, see the [docs](https://tree-sitter.github.io/tree-sitter/cli/highlight.html) for more information.
 
-For more commands see [tree sitter CLI docs](https://tree-sitter.github.io/tree-sitter/cli/index.html) and the [tree-sitter-mal Wiki](Wiki).
+For more commands see [tree sitter CLI docs](https://tree-sitter.github.io/tree-sitter/cli/index.html) and the [tree-sitter-mal Wiki](https://github.com/mal-lang/tree-sitter-mal/wiki).
 
 ### NeoVim Manual Installation
 > [!NOTE]
