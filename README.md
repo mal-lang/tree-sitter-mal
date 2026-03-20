@@ -1,6 +1,6 @@
 # tree-sitter-mal
 
-MAL grammar for [tree-sitter](https://github.com/tree-sitter/tree-sitter).
+MAL grammar for [tree-sitter](https://github.com/tree-sitter/tree-sitter). Used in the MAL-toolbox to parse MAL languages.
 
 References
 - [MAL Specification](https://github.com/mal-lang/mal-specification)
