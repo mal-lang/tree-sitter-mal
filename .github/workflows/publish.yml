@@ -2,7 +2,7 @@ name: Publish packages
 
 on:
   push:
-    tags: ["*"]
+    tags: ["v[0-9]+.[0-9]+.[0-9]+"]
 
 permissions:
   contents: write
