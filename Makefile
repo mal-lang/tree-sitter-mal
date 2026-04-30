@@ -4,7 +4,7 @@ endif
 
 LANGUAGE_NAME := tree-sitter-mal
 HOMEPAGE_URL := https://github.com/tobiky/tree-sitter-mal
-VERSION := 1.2.3
+VERSION := 1.2.4
 
 # repository
 SRC_DIR := src
