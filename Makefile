@@ -3,8 +3,8 @@ $(error Windows is not supported)
 endif
 
 LANGUAGE_NAME := tree-sitter-mal
-HOMEPAGE_URL := https://github.com/tobiky/tree-sitter-mal
-VERSION := 1.2.4
+HOMEPAGE_URL := https://github.com/mal-lang/tree-sitter-mal
+VERSION := 1.3.1
 
 # repository
 SRC_DIR := src

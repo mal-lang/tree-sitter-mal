@@ -42,3 +42,6 @@ __pycache__/
 
 # Agents
 .claude
+
+# Cargo artifacts
+Cargo.lock

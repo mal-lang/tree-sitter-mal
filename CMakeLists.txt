@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.13)
 
 project(tree-sitter-mal
-        VERSION "1.2.4"
+        VERSION "1.3.1"
         DESCRIPTION "IT systems are growing in complexity and the threat from cyberattacks is increasing. Threat modeling is a process that can be used to analyze potential attacks to IT systems in order to facilitate secure design. Meta Attack Language (MAL) is a threat modeling language framework for the creation of domain specific languages (DSL). MAL is developed at KTH Royal Institute of Technology."
-        HOMEPAGE_URL "https://github.com/tobiky/tree-sitter-mal"
+        HOMEPAGE_URL "https://github.com/mal-lang/tree-sitter-mal"
         LANGUAGES C)
 
 option(BUILD_SHARED_LIBS "Build using shared libraries" ON)

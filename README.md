@@ -37,7 +37,7 @@ tree-sitter build --wasm;tree-sitter playground
     local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
     parser_config.mal = {
       install_info = {
-        url = "https://github.com/Tobiky/tree-sitter-mal", -- local path or git repo
+        url = "https://github.com/mal-lang/tree-sitter-mal", -- local path or git repo
         files = {"src/parser.c"},
         branch = "main",
         generate_requires_npm = false,
