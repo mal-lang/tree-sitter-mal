@@ -1,4 +1,4 @@
-module github.com/tobiky/tree-sitter-mal
+module github.com/mal-lang/tree-sitter-mal
 
 go 1.22
 
