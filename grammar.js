@@ -138,7 +138,7 @@ module.exports = grammar({
 
     detector_context_reference: $ => seq(
       field('ctx_step', $.asset_expr),
-      optional(field('id', $.identifier)),
+      field('id', $.identifier),
     ),
 
     // True positive and false positive rates for detector.

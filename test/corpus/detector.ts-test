@@ -163,36 +163,3 @@ category Test {
                 (tp_fp_pair
                   tp_rate: (float)
                   fp_rate: (float))))))))))
-
-================================
-Detector with Unlabeled Context
-================================
-
-category Test {
-    asset TestAsset {
-        | detector_step ! detector_name (a) [tpr: 1.0, fpr: 0.0]
-    }
-}
-
---------------------------------
-
-(source_file
-  (declaration
-    (category_declaration
-      id: (identifier)
-      assets: (asset_declaration
-        id: (identifier)
-        body: (asset_definition
-          (attack_step
-            step_type: (step_type)
-            id: (identifier)
-            detector: (detector
-              name: (detector_name (identifier))
-              context: (detector_context
-                (detector_context_reference
-                  ctx_step: (asset_expr
-                    (identifier))))
-              tp_fp_rate: (tp_fp_rate
-                (tp_fp_pair
-                  tp_rate: (float)
-                  fp_rate: (float))))))))))
